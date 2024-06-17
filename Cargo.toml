@@ -12,3 +12,20 @@ serde = { version = "1.0.203", features = ["derive"] }
 dotenv = "0.15.0"
 log = "0.4.21"
 env_logger = "0.11.3"
+aws-sdk-s3 = "1.36.0"
+aws-smithy-types = "1.2.0"
+aws-sdk-translate = "1.31.0"
+anyhow = "1.0.86"
+tabled = "0.15.0"
+color-print = "0.3.6"
+terminal_size = "0.3.0"
+
+[[bin]]
+name = "app"
+path = "src/main.rs"
+
+[[bin]]
+name = "rekognition"
+path = "src/bin/rekognition/main.rs"
+
+
