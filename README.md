@@ -11,3 +11,13 @@ I am getting it from an object located in S3.
 ## Prerequisites
 - [Rust](https://www.rust-lang.org/tools/install)
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
+
+### Demo CLI
+
+> **Note**
+> I made a CLI for a demo using aws-sdk-rust.
+> It is only using the credentials from aws-cli, so if you want to try it out, please install AWS CLI on your own as well.
+
+```bash
+rekognition detect <path>
+```
