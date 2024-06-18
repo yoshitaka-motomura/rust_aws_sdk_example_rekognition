@@ -19,6 +19,7 @@ anyhow = "1.0.86"
 tabled = "0.15.0"
 color-print = "0.3.6"
 terminal_size = "0.3.0"
+clap = { version = "4.5.7", features = ["cargo"] }
 
 [[bin]]
 name = "app"
@@ -26,6 +27,4 @@ path = "src/main.rs"
 
 [[bin]]
 name = "rekognition"
-path = "src/bin/rekognition/main.rs"
-
-
+path = "src/bin/main.rs"
