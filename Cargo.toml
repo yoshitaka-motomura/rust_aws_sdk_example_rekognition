@@ -22,9 +22,5 @@ terminal_size = "0.3.0"
 clap = { version = "4.5.7", features = ["cargo"] }
 
 [[bin]]
-name = "app"
-path = "src/main.rs"
-
-[[bin]]
 name = "rekognition"
 path = "src/bin/main.rs"
