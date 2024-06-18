@@ -2,6 +2,7 @@ use std::path::Path;
 use std::fs::File;
 use std::io::Write;
 use anyhow::{Result, Error};
+use color_print::cprintln;
 use reqwest::get;
 use uuid::Uuid;
 use log::*;
@@ -57,8 +58,12 @@ pub fn clean_cache_dir() -> Result<(), Error> {
             let file_path = file?.path();
             std::fs::remove_file(file_path)?;
         }
-        println!("Cache directory cleaned successfully.");
+        cprintln!("Cache directory path: {}", cache_dir_path);
+        cprintln!("✅<green>Cache directory cleaned successfully.</green>");
     }
+
+    let cache_dir_files = std::fs::read_dir(&cache_dir_path)?.count();
+    cprintln!("✅<green>Cache directory size: {} files</green>", cache_dir_files);
 
     Ok(())
 }
