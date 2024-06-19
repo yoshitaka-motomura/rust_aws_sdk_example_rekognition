@@ -18,6 +18,14 @@ I am getting it from an object located in S3.
 > I made a CLI for a demo using aws-sdk-rust.
 > It is only using the credentials from aws-cli, so if you want to try it out, please install AWS CLI on your own as well.
 
+#### Build
+```bash
+cargo build --release --bin rekognition
+# Somewhere along your path
+cp target/release/rekognition /usr/local/bin
+
+```
+
 ```bash
 rekognition detect <path>
 ```
